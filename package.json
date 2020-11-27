@@ -49,5 +49,11 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "less": "^3.12.2",
+    "less-loader": "^7.1.0",
+    "react-bootstrap": "^1.4.0"
+  }
 }

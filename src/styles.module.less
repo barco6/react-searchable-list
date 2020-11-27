@@ -1,0 +1,79 @@
+@searchable-gray-color : #DEDEDE;
+@searchBoxHeight       : 40px;
+@itemsHorizontalPadding: 20px;
+
+.SearchableListContainer {
+  background   : #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow   : 0px 0px 10px #7A7A7A29;
+  border-radius: 5px;
+
+  >div:first-child {
+    max-width       : 100%;
+    background-color: @searchable-gray-color;
+    border-radius   : 5px 5px 0 0;
+    height          : @searchBoxHeight;
+    padding         : 5px @itemsHorizontalPadding;
+    display         : flex;
+
+    input {
+      width           : 100%;
+      background-color: #fff;
+      border-radius   : 20px;
+      height          : 31px;
+      font-size       : 12px;
+      border          : unset;
+      padding         : 5px 25px;
+      border          : 1px solid @searchable-gray-color;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .search-box.form-group {
+    max-width       : 100%;
+    background-color: @searchable-gray-color;
+    border-radius   : 5px 5px 0 0;
+    height          : @searchBoxHeight;
+    padding         : 5px @itemsHorizontalPadding;
+    display         : flex;
+
+    input {
+      width           : 100%;
+      background-color: #fff;
+      border-radius   : 20px;
+      height          : 31px;
+      font-size       : 12px;
+      border          : unset;
+      padding         : 5px 25px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  ul {
+    max-height: calc(100% - @searchBoxHeight);
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding   : 0;
+    margin    : 0 auto;
+
+    li {
+      padding      : 10px @itemsHorizontalPadding;
+      overflow     : hidden;
+      text-overflow: ellipsis;
+
+      &:not(:last-child) {
+        border-bottom: 0.5px solid #f2f2f2;
+      }
+
+      &:hover {
+        background: #ebf3fe 0% 0% no-repeat padding-box;
+      }
+    }
+  }
+}
